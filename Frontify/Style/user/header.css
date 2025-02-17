@@ -1,0 +1,59 @@
+/* Header Styles ....................................................................................................................*/
+    /* Header Styles */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        z-index: 1000;
+    }
+
+    /* Back Arrow on the Left */
+    .header_back {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .header_back a {
+        color: #000;
+        text-decoration: none;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header_back a:hover {
+        color: #0a417b;
+    }
+
+    /* Profile Section */
+    .header_profile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        /* Space between image and username */
+        margin-left: auto;
+        /* Push to the right */
+    }
+
+    .profile_image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ccc;
+    }
+
+    .username {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+    }

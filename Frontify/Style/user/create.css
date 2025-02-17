@@ -1,0 +1,312 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.editor-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 600px;
+}
+
+.editor-main {
+    flex: 3;
+    padding: 20px;
+    min-width: 300px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background: #f9f9f9;
+    flex-wrap: wrap;
+}
+
+.toolbar button,
+.toolbar select {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.toolbar button:hover,
+.toolbar select:hover {
+    background: #e9ecef;
+}
+
+.editor-content {
+    border: 1px solid #ddd;
+    padding: 10px;
+    height: 400px;
+    /* Fixed height */
+    max-height: 500px;
+    /* Prevent resizing beyond this height */
+    border-radius: 3px;
+    background: #fff;
+    outline: none;
+    margin-top: 20px;
+    overflow-y: auto;
+    /* Scrollbar for overflowing content */
+    overflow-x: hidden;
+    /* Hide horizontal scrolling */
+}
+
+
+
+
+#title-input {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content button {
+    background: #fff;
+    border: none;
+    padding: 5px 10px;
+    text-align: left;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-content button:hover {
+    background: #e9ecef;
+}
+
+.emoji-picker {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 300px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 630px;
+    margin-top: 120px;
+}
+
+.emoji-picker span {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.emoji-picker span:hover {
+    background: #f4f4f4;
+    border-radius: 5px;
+}
+
+.settings-bar {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    background: #f9f9f9;
+    min-width: 250px;
+}
+
+.settings-bar h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.settings-bar select,
+.settings-bar input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.settings-bar label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+    .editor-container {
+        flex-direction: column;
+    }
+
+    .settings-bar {
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+}
+
+
+/* button hover code --------------------------------------------------------------------------------------------------------*/
+.buttons-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background: white;
+    border: solid 2px black;
+    padding: .375em 1.125em;
+    font-size: 1rem;
+}
+
+.button-arounder {
+    font-size: 1rem;
+    background: hsl(190, 37%, 19%);
+    color: hsl(190deg, 10%, 95%);
+    box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, .2);
+    transform: translateY(0);
+    border-radius: 0px;
+    --dur: .15s;
+    --delay: .15s;
+    --radius: 16px;
+
+    transition:
+        border-radius var(--dur) var(--delay) ease-out,
+        box-shadow calc(var(--dur) * 4) ease-out,
+        transform calc(var(--dur) * 4) ease-out,
+        background calc(var(--dur) * 4) steps(4, jump-end);
+}
+
+.button-arounder:hover,
+.button-arounder:focus {
+    box-shadow: 0 4px 8px hsla(190deg, 15%, 5%, .2);
+    transform: translateY(-4px);
+    background: hsl(199, 88%, 16%);
+    border-radius: var(--radius);
+}
+
+/* changes done by me*/
+#editor {
+    border: 1px solid #ddd;
+    padding: 10px;
+    min-height: 300px;
+    border-radius: 3px;
+    background: #fff;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+/* back arrow ---------------------------------------------------------------------------------------*/
+.header_back {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header_back a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_back a:hover {
+    color: #0a417b; /* Highlight color on hover */
+}
+
+/* Header Styles ....................................................................................................................*/
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Back Arrow on the Left */
+.header_back {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header_back a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_back a:hover {
+    color: #0a417b;
+}
+
+/* Profile Section */
+.header_profile {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and username */
+    margin-left: auto; /* Push to the right */
+}
+
+.profile_image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}

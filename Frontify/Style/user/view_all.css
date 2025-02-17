@@ -1,0 +1,104 @@
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.category-dropdown select {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.search-box input {
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.search-box button {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.blog-post {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.category {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.blog-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.blog-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.blog-image img {
+    width: 100%; /* Reduce image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+.blog-content {
+    font-size: 21px; /* Medium font size for content */
+    margin-bottom: 10px;
+}
+
+.blog-actions {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+}
+
+.like-btn i, .comment-btn i {
+    font-size: 24px; /* Increase icon size */
+    margin-right: 5px; /* Space between the icon and the text */
+}
+
+
+.like-btn,
+.comment-btn {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.like-btn, .comment-btn {
+    cursor: pointer;
+    z-index: 10; /* Ensure they are clickable */
+}
+
+
+.blog-video {
+    width: 100%; /* Reduce video width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+
+  /*******************************         new blog pop up         ****/ 
+  .blog-image img, .blog-video {
+    width: 100%;
+    height: auto;
+}
